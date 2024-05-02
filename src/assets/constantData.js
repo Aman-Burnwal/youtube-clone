@@ -60,6 +60,77 @@ const buttonList = [
 ]
 const API_KEY = 'AIzaSyChA6NUglGZYCu5uo5LvHXMPNM1eKg8Qj0';
 
+const Replies = [
+    {
+        id: "first",
+        comment: "This is the first comment.",
+        reply: [
+            {
+                id: "second",
+                comment: "This is a reply to the first comment.",
+                reply: []
+            },
+            {
+                id: "third",
+                comment: "Another reply to the first comment.",
+                reply: [
+                    {
+                        id: "second",
+                        comment: "A nested reply under the third reply.",
+                        reply: []
+                    },
+                    {
+                        id: "third",
+                        comment: "Another nested reply under the third reply.",
+                        reply: []
+                    },
+                    {
+                        id: "four",
+                        comment: "Yet another nested reply under the third reply.",
+                        reply: []
+                    }
+                ]
+            },
+            {
+                id: "four",
+                comment: "One more reply to the first comment.",
+                reply: []
+            }
+        ]
+    },
+    {
+        id: "second",
+        comment: "This is the second comment.",
+        reply: []
+    },
+    {
+        id: "third",
+        comment: "The third comment.",
+        reply: [
+            {
+                id: "second",
+                comment: "A reply to the third comment.",
+                reply: []
+            },
+            {
+                id: "third",
+                comment: "Another reply to the third comment.",
+                reply: []
+            },
+            {
+                id: "four",
+                comment: "Yet another reply to the third comment.",
+                reply: []
+            }
+        ]
+    },
+    {
+        id: "four",
+        comment: "This is the fourth comment.",
+        reply: []
+    }
+];
+
 
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&regionCode=IN&key=${API_KEY}`;
 const serachQueryUrl = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
@@ -69,6 +140,7 @@ export {
     buttonList,
     serachQueryUrl,
     API_KEY,
+    Replies,
     
     url
 };

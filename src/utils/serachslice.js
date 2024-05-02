@@ -13,7 +13,7 @@ const SearchSlice = createSlice({
 
             let keys = Object.keys(state);
             if (keys.length == 5) delete state[keys[0]];
-            console.log(keys);
+    
         },
 
         clearCache: (state) => {

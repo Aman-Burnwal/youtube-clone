@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { url, VideoContainer } from "../assets"
+import { nanoid } from "nanoid";
 
 import { Link } from "react-router-dom";
 
@@ -714,7 +715,7 @@ const Video = () => {
 
 
   useEffect(() => {
-    // data();
+    data();
   }, []);
 
 
@@ -728,10 +729,8 @@ const Video = () => {
 
         const id = video.id.videoId;
         const  snippet  = video.snippet 
-
-        {/* console.log(video); */ }
         
-        return <Link to={"/watch?v=" + id} key={id}> <VideoContainer data={snippet} key={id} /> </Link>
+        return <Link to={"/watch?v=" + id} key={nanoid()}> <VideoContainer data={snippet} key={id} /> </Link>
       })}
     </ul>
     : 
