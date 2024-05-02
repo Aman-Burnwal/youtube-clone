@@ -714,7 +714,7 @@ const Video = () => {
 
 
   useEffect(() => {
-    data();
+    // data();
   }, []);
 
 

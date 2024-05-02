@@ -47,9 +47,9 @@ const VideoContainer = ({ data }) => {
   return (
       <li className="flex flex-col gap-4 w-80 h-80  overflow-hidden">
           <div>
-              <img src={thumbnails?.medium.url}
-                  height={thumbnails?.medium?.height}
-                  width={thumbnails?.medium?.width}
+              <img src={thumbnails &&  thumbnails?.medium.url}
+                  height={thumbnails && thumbnails?.medium?.height}
+                  width={thumbnails && thumbnails?.medium?.width}
               ></img>
           </div>
 

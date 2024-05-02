@@ -10,7 +10,8 @@ import Buttons from "../mainContent/Buttons";
 import Video from "../mainContent/Video";
 import VideoContainer from "../mainContent/VideoContainer";
 import WatchPage from "../mainContent/WatchPage";
-import { toggleMenu , closeMenue} from "../utils/appslice";
+import { toggleMenu, closeMenue } from "../utils/appslice";
+import { cacheResults} from "../utils/serachslice"
 
 
 
@@ -18,6 +19,7 @@ import { toggleMenu , closeMenue} from "../utils/appslice";
 import { data , buttonList, url} from "./constantData";
 export {
     closeMenue,
+    cacheResults,
     Buttons,
     WatchPage,
     Video,
