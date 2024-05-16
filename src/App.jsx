@@ -23,8 +23,8 @@ const appRouter = new createBrowserRouter(
       children: [
         {
           path: "/",
-          element: <Suspense fallback={<LoadingFallback />}>
-          
+          element: <Suspense
+            fallback={<LoadingFallback />}>
             <LazyComponent />
           </Suspense>,
 

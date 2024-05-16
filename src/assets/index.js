@@ -11,15 +11,18 @@ import Video from "../mainContent/Video";
 import VideoContainer from "../mainContent/VideoContainer";
 import WatchPage from "../mainContent/WatchPage";
 import { toggleMenu, closeMenue } from "../utils/appslice";
-import { cacheResults} from "../utils/serachslice"
+import { cacheResults } from "../utils/serachslice"
+import LiveChat from "../mainContent/LiveChat";
 
 
 
 // constant data
 import { data , buttonList, url} from "./constantData";
+
 export {
     closeMenue,
     cacheResults,
+    LiveChat,
     Buttons,
     WatchPage,
     Video,
