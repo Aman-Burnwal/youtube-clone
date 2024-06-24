@@ -8,7 +8,7 @@ const liveCommentSlice = createSlice({
     },
     reducers: {
         pushLiveMessage: (state, action) => {
-            console.log(action.payload);
+            // console.log(action.payload);
             if (typeof action.payload === 'string') {
                 state.liveMessage.unshift({ name: userName, message: action.payload });
             } else {
@@ -18,8 +18,8 @@ const liveCommentSlice = createSlice({
             }
             
             
-            if (state.liveMessage.length > 30) {
-                state.liveMessage = state.liveMessage.slice(0, 30);
+            if (state.liveMessage.length > 10) {
+                state.liveMessage = state.liveMessage.slice(0, 10);
             }
  
         }

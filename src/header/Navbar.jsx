@@ -7,6 +7,7 @@ import { cacheResults, toggleMenu , } from "../assets";
 import { useEffect, useState } from "react";
 import { serachQueryUrl } from "../assets/constantData";
 import MenuIcons from "./MenuIcons";
+import { clearCache } from "../utils/serachslice";
 
 
 
@@ -30,9 +31,10 @@ const Navbar = () => {
 
         if (query.length == 0) {
             setSearchSuggestions("");
-            // dispatch(clearCache());
-            setShowSuggestions(false);
+            dispatch(clearCache());
+            setShowSuggestions(() => false);
         }
+ 
 
         const url = serachQueryUrl + query;
         
@@ -56,9 +58,9 @@ const Navbar = () => {
 
 
         const searchDebouncer = setTimeout(() => {
-
+            // console.log("searcQuery")
             if (searchCache[serachQuery]) {
-                console.log("reduc")
+                // console.log(searchCache[serachQuery])
                 setSearchSuggestions(searchCache[serachQuery]);
             }
             else fetchSuggestions(serachQuery)
@@ -108,8 +110,15 @@ const Navbar = () => {
                                 rounded-l-full pl-10 h-8  text-slate-700 w-full"
                                 placeholder="search"
                                 onChange={(e) => setSerachQuery(e.target.value.trimStart())}
-                                onFocus={() => setShowSuggestions(true)}
-                                onBlur={() => setShowSuggestions(false)}
+                                onFocus={() => {
+                                    // console.log("onFocus", showsuggestions)
+                                    return setShowSuggestions(() => true);
+                                }}
+
+                                onBlur={() => {
+                                    // console.log("onBlur", showsuggestions)
+                                    return setShowSuggestions(() => true)
+                                }}
                                 value={serachQuery}
 
                             >
@@ -130,6 +139,7 @@ const Navbar = () => {
                         
                     </div>
                     <div className="absolute  text-justify rounded-lg bg-opacity-75 bg-white">
+                       
                         {showsuggestions && searchSuggestions &&   searchSuggestions.map(
                             (suggest) => <div
                                 key={suggest}

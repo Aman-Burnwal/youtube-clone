@@ -31,7 +31,7 @@ const WatchPage = () => {
       if (userName.length == 0 || Livecomments.length == 0) return;
       dispatch(pushLiveMessage( [userName,  Livecomments] ));
       // console.log(Livecomments);
-    }, 2000);
+    }, 3000);
     
     return () =>  clearInterval(innterval);
     },[])
