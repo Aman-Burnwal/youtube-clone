@@ -13,6 +13,8 @@ import WatchPage from "../mainContent/WatchPage";
 import { toggleMenu, closeMenue } from "../utils/appslice";
 import { cacheResults } from "../utils/serachslice"
 import LiveChat from "../mainContent/LiveChat";
+import Login from "../header/Login" 
+
 
 
 
@@ -22,6 +24,8 @@ import { data , buttonList, url} from "./constantData";
 export {
     closeMenue,
     cacheResults,
+    Login,
+
     LiveChat,
     Buttons,
     WatchPage,
