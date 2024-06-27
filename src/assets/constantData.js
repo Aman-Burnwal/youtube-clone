@@ -58,7 +58,7 @@ const buttonList = [
     "Movie",
     "Punjabi Song"
 ]
-const API_KEY = 'AIzaSyChA6NUglGZYCu5uo5LvHXMPNM1eKg8Qj0';
+const API_KEY = 'AIzaSyBz_z1OqhIQ5iKWFYQUlxoVuy-VI-d-09s';
 
 const Replies = [
     {
