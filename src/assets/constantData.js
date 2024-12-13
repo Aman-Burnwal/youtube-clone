@@ -326,7 +326,7 @@ const RandomLiveComments = [
     "I'm so glad I stumbled upon this video."]
 
 
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&regionCode=IN&key=${API_KEY}`;
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=20&regionCode=IN&key=${API_KEY}`;
 const serachQueryUrl = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 export {
     userName,
